@@ -5,6 +5,8 @@ while choice != '0':
     if choice == '1':
         valutaSzam()
     elif choice == '2':
-        arFolyam()
-        
+         arFolyam()
+    elif choice == '3':
+        penzValtas()    
+
         

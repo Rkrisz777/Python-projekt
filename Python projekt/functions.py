@@ -19,10 +19,14 @@ def valutaSzam():
     input('Tovább...')
 def arFolyam():
     system('cls')
-    print('Árfolyam')
+    print('Válasszon árfolyamot:')
+    
     print(f'\t Euró árfolyam: Szeptember {eu[0]}ft , Október {eu[1]}ft, November {eu[2]}ft')
     print(f'\t Dollár árfolyam: Szeptember {usd[0]}ft , Október {usd[1]}ft, November {usd[2]}ft')
     print(f'\t Svájci-frank árfolyam: Szeptember {frank[0]}ft , Október {frank[1]}ft, November {frank[2]}ft')
     print(f'\t Vietnámi-dong árfolyam: Szeptember {dong[0]}ft , Október {dong[1]}ft, November {dong[2]}ft')
     input('Tovább...')
+def penzValtas():
+    print('Euró-Forint')
+    
     
