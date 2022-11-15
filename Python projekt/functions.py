@@ -1,5 +1,8 @@
 from data import *
 from os import system
+from random import randint
+import time
+
 def menu():
     system('cls')
     print('0 - Kilép')
@@ -27,6 +30,26 @@ def arFolyam():
     print(f'\t Vietnámi-dong árfolyam: Szeptember {dong[0]}ft , Október {dong[1]}ft, November {dong[2]}ft')
     input('Tovább...')
 def penzValtas():
-    print('Euró-Forint')
-    
+    system('cls')
+    print('0 - eu')
+    print('1 - usd')
+    print('2 - frank')
+    print('3 - dong')    
+    ertek1 = input('Váltani kívánt pénznem: ')
+    if ertek1 == '0':
+         ertek2 = eu[randint(0,len(eu))-1]
+    elif ertek1 == '1':
+        ertek2 = usd[randint(0,len(usd))-1]
+    elif ertek1 == '2':
+        ertek2 = frank[randint(0,len(frank))-1]
+    elif ertek1 == '3':
+        ertek2 = dong[randint(0,len(dong))-1]
+
+    mennyiseg1 = input('Kérem az átváltandó mennyiséget: ')
+    print('Átváltva ennyi: ',ertek2 * int(mennyiseg1))
+    time.sleep(2)
+
+
+   
+
     
