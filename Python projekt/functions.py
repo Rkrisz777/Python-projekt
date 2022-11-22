@@ -12,7 +12,7 @@ def menu():
     print('3 - Átváltás')
     print('4 - Új pénznem felvétele')
     print('5 - Keresés')
-    print('6 - Törlés')
+    # print('6 - Törlés')
     return input('Kérem válasszon: ')
 
 def valutaSzam():
@@ -59,7 +59,7 @@ def ujPenzFelvetel():
     ujertek.append(ertek)
     saveToFile(penz, ertek)
     print('Sikeres felvétel.')
-    input()
+    time.sleep(2)
 def saveToFile(penz, ertek):
     file = open(filename, 'a', encoding='utf-8')
     
@@ -75,21 +75,23 @@ def loadFromFile():
     file.close()
 
 def keresesAListában(needle):
+    system('cls')
+    
     for penz in penzek:
         if penz == needle:
             return 'Létezik'
     return False
-    
-def penzTörles():
-    system('cls')
-    print('Valuta törölve:')
-    penz = input('Ki legyen törölve: ')
-    index = keresesAListában(penz)
-    penzek.pop(index)
-    ujertek.pop(index)
-    saveAll()
-    print(f'{penz} törölve.')
-    input()
+           
+# def penzTörles():
+#      system('cls')
+#      print('Valuta törölve:')
+#      penz = input('Ki legyen törölve: ')
+#      index = keresesAListában(penz)
+#      penzek.pop(index)
+#      ujertek.pop(index)
+#      saveAll()
+#      print(f'{penz} törölve.')
+#      input()
 def saveAll():
     file = open(filename, 'w', encoding='utf-8')
     for index in range(len(penzek)):
@@ -104,4 +106,7 @@ def Kilistazas():
     print('Pénznemek listája:')
     for i in range(len(penzek)):
         print(f'\t {penzek[i]}')
-    input()
+    time.sleep(2)
+
+    
+    

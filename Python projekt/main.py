@@ -16,6 +16,6 @@ while choice != '0':
         penz = input('Adja meg a keresendő pénznemet: ')
         print(keresesAListában(penz))
         input()
-    elif choice == '6':
-        penzTörles()
+    
+   
         
