@@ -76,7 +76,6 @@ def loadFromFile():
 
 def keresesAListában(needle):
     system('cls')
-    
     for penz in penzek:
         if penz == needle:
             return 'Létezik'
